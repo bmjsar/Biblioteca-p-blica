@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylecontacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Preentrega</title>
+</head>
+<header class="header">
+        
+        <div class="imagen2">
+            <img src="Imagenes/logo.png" alt="Logo de la biblioteca">
+            <h1 id="nombre">Faro de Cultura</h1>
+        </div>
+            <nav class="nav"> 
+                <ul>
+                    <li><a href="index.html"> Inicio</a> </li>
+                    <li><a href="información.html"> información</a> </li>
+                    <li> <a href="catálogos.html"> Catálogos</a> </li>
+                    <li> <a href="prestamos.html"> Préstamos</a> </li>
+                    <li> <a href="contacto.html"> Contacto</a> </li>
+                </ul>
+            </nav>
+</header>
+<main>
+    <h2 id="main-title">Envíenos su consulta</h2>
+    <body>
+        <form action="https://formspree.io/f/mgeqvwgo" method="post">
+            
+            <label>Nombre</label>
+            <input type="text" name="nombre" placeholder= "  Escriba su nombre"> 
+
+            <label>Apellido</label>
+            <input type="text" name="apellido" placeholder= "  Escriba su apellido"> 
+
+            <label>Correo electrónico</label>
+            <input type="email" name="email" placeholder= "  Escriba su Correo electrónico"> 
+
+            <label>Contraseña</label>
+            <input type="password" name="password" placeholder= "  Escriba su contraseña"> 
+
+            <!-- <label>Fecha de nacimiento</label> 
+            <input type="date" name="fecha" placeholder= "  Escriba su fecha de nacimiento">  -->
+
+            <label>Tu consulta</label>
+            <textarea name="consulta" id="" cols="30" rows="5" required></textarea>
+
+            <label>Nacionalidad</label>
+                <select>
+                    <option value="ar">Argentina</option>
+                    <option value="pe">Perú</option>
+                    <option value="py">Paraguay</option>
+                    <option value="ch">Chile</option>
+                    <option value="uy">Uruguay</option>
+                    <option value="bv">Bolivia</option>
+                </select>
+
+                <label>
+                    <input type="checkbox" name="terminos"> Acepto términos y condiciones
+                </label>
+                <div class="botones">
+                    <button type="submit">Enviar</button>
+                    <button type="reset" class="limpiar">Limpiar</button>
+        </form>
+    </body>
+</main>
+<footer>
+    <p>© 2024 Faro de Cultura. Todos los derechos reservados.</p>
+        <nav>
+            <a href="/privacidad">Privacidad</a> |
+            <a href="/terminos">Términos</a> |
+            <a href="contacto.html"> Contacto</a>
+        </nav>
+        <div class="social">
+            <a href="https://twitter.com/misitio">Twitter</a>
+            <a href="https://facebook.com/misitio">Facebook</a>
+        </div>
+</footer>
+</html>

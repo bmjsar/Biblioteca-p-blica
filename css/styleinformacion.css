@@ -1,0 +1,136 @@
+/* Reset only what you need */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header {
+    height: 100px; 
+    width: 100%;
+    display: flex;               /* Activa flexbox */
+    justify-content: space-between; /* Separa izquierda y derecha */
+    align-items: center;         /* Centra verticalmente */
+    background: #0078d7;
+    padding: 10px 20px;
+}
+.imagen2 {
+    margin: 0;
+    height: 90px; /* Ajusta según el tamaño deseado */
+    display: flex;        
+    justify-content: space-between; 
+    align-items: center;        
+    gap: 50px; 
+    margin-left: 50px;                /* Elimina márgenes extra */
+    color: white;               /* Color del texto */
+}
+
+.nav ul {
+    display: flex;
+    margin-right: 40px;
+    gap: 20px;
+    list-style: none;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.nav ul li a:hover {
+    color: rgb(17, 167, 84);
+    background-color: red;
+}
+main {
+    padding: 20px;
+    background-color: rgb(203, 221, 233);
+}
+#main-title {
+    color: #186195;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    padding-left: 200px; /* más estable que margin-left */
+    text-align: left;
+}
+
+.texto {
+    flex: 1;
+    font-size: 25px;
+    line-height: 1.6;
+}
+.info {
+    margin-top: 40px;
+
+}
+details {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #d4e7f6;
+    margin-bottom: 15px; /* espacio entre bloques */
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* quita el marcador por defecto */
+}
+
+p {
+    line-height: 1.6;
+}
+aside.foto {
+    display: flex;
+    justify-content: space-between; /* texto a la izquierda, foto a la derecha */
+    align-items: center;            /* centra verticalmente ambos bloques */
+    gap: 20px;
+    padding: 10px;
+}
+
+.imagen {
+    flex: 1;
+    max-width: 800px; /* controla el tamaño de la foto */
+}
+
+.imagen img {
+    max-width:800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+h2 {
+    padding-bottom: 5px;
+    
+}
+.cartel {
+    margin-left: 670px;
+    margin-right: 16px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #186195;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+footer {
+    background: #0078d7;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+footer a {
+    color: #eee;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

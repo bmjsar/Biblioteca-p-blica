@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleprestamo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Preentrega</title>
+</head>
+<header class="header">
+        
+        <div class="imagen2">
+            <img src="Imagenes/logo.png" alt="Logo de la biblioteca">
+            <h1 id="nombre">Faro de Cultura</h1>
+        </div>
+            <nav class="nav"> 
+                <ul>
+                    <li><a href="index.html"> Inicio</a> </li>
+                    <li><a href="información.html"> información</a> </li>
+                    <li> <a href="catálogos.html"> Catálogos</a> </li>
+                    <li> <a href="prestamos.html"> Préstamos</a> </li>
+                    <li> <a href="contacto.html"> Contacto</a> </li>
+                </ul>
+            </nav>
+</header>
+<main>
+        <h2 id="main-title">Préstamos de libros</h2>
+    
+        <section class="contenido">
+
+            <article class="texto">
+                <p>La biblioteca pública <strong>Faro de Cultura</strong> es un espacio cultural y de encuentro. 
+Ofrece a los vecinos y vecinas acceso a libros, actividades y salas de lectura. 
+El préstamo de libros es uno de los servicios más utilizados, y permite disfrutar de la lectura tanto dentro como fuera de la biblioteca.
+                </p>
+        <h2>Cómo funciona el préstamo</h2>
+            <ol>
+                <li><strong>Consultar disponibilidad:</strong> Podés acercarte o llamar a la Biblioteca para ver qué títulos están disponibles. También podés revisar los <a href="catálogos.html">catálogos</a> en línea utilizando el sistema de búsqueda.</li>
+                <li><strong>Cantidad y duración:</strong> Se pueden retirar hasta 3 libros por vez, por un período de 30 días. La Biblioteca cuenta con más de 320.000 ejemplares.</li>
+                <li><strong>Horarios de retiro:</strong> El retiro se realiza de lunes a viernes, de 10 a 17 h, salvo algunos feriados con horarios extendidos.</li>
+                <li><strong>Requisito:</strong> Traé tu DNI si es tu primera visita.</li>
+            </ol>
+
+            </article>
+        
+                <aside class="tablas">
+            
+                    <table class="texto" border="1">
+                        <caption>Estado de los préstamos</caption> 
+                    
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Pedido</th>
+                                <th>Estado del Pedido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Juan</td>
+                                <td>juan@email.com</td>
+                                <td>El Quijote</td>
+                                <td>Pendiente</td>
+                            </tr>
+                            <tr>
+                                <td>Ana</td>
+                                <td>ana@email.com</td>
+                                <td rowspan="2">Tom Sawyer</td>
+                                <td>En Progreso</td>
+                            </tr>
+                            <tr>
+                                <td>Pepa</td>
+                                <td>pepa@email.com</td>
+                        <td>Entregado</td>
+                            </tr>
+                            <tr>
+                                <td>Juana</td>
+                                <td>juana@email.com</td>
+                                <td>El Principito</td>
+                                <td>Pendiente</td>
+                            </tr>
+                    </tbody>
+                </table>
+                </aside>
+            </section>
+
+        <form action="https://formspree.io/f/mgeqvwgo" method="POST">
+            
+                <article>
+                <form class="pedido-form">
+
+    <div class="form-columns">
+    <!-- Información personal -->
+        <fieldset>
+            <legend>Información personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="number" id="telefono" name="telefono">
+        </fieldset>
+
+    <!-- Información del pedido -->
+        <fieldset>
+            <legend>Información del pedido</legend>
+            <label for="libro">Libros:</label>
+            <input type="text" id="libros" name="libros" required>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        </fieldset>
+    </div>
+    
+            <button type="submit" class="btn primario">Enviar pedido</button>
+            <button type="reset" class="btn secundario">Limpiar</button>
+    
+        
+</main>
+<footer>
+    <p id="limpio">© 2024 Faro de Cultura. Todos los derechos reservados.</p>
+        <nav>
+            <a href="/privacidad">Privacidad</a> |
+            <a href="/terminos">Términos</a> |
+            <a href="contacto.html"> Contacto</a>
+        </nav>
+        <div class="social">
+            <a href="https://twitter.com/misitio">Twitter</a>
+            <a href="https://facebook.com/misitio">Facebook</a>
+        </div>
+</footer>
+    
+</html>

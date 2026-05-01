@@ -1,0 +1,165 @@
+/* Reset only what you need */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header {
+    height: 100px; 
+    width: 100%;
+    display: flex;               /* Activa flexbox */
+    justify-content: space-between; /* Separa izquierda y derecha */
+    align-items: center;         /* Centra verticalmente */
+    background: #0078d7;
+    padding: 10px 20px;
+}
+.imagen2 {
+    margin: 0;
+    height: 90px; /* Ajusta según el tamaño deseado */
+    display: flex;        
+    justify-content: space-between; 
+    align-items: center;        
+    gap: 50px; 
+    margin-left: 50px;                /* Elimina márgenes extra */
+    color: white;               /* Color del texto */
+}
+
+.nav ul {
+    display: flex;
+    margin-right: 40px;
+    gap: 20px;
+    list-style: none;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.nav ul li a:hover {
+    color: rgb(17, 167, 84);
+    background-color: red;
+}
+main {
+    padding: 20px;
+    background-color: rgb(203, 221, 233);
+}
+
+#main-title {
+    color: #186195;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    padding-left: 200px; /* más estable que margin-left */
+    text-align: left;
+}
+
+.catalogo ul{
+    margin-top: 1rem;
+    display: flex;
+    margin-right: 100px;
+    margin-bottom: 40px;
+    gap: 40px;
+    list-style: none;
+}
+
+h3 {
+    margin-top: 1rem;
+    margin-left: 200px;
+    font-size: 25px;
+    background-color: #d4e7f6;
+    color: #186195;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 280px;
+}
+
+.busqueda {
+    padding: 2rem;
+}
+
+.busqueda {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #d4e7f6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.busqueda label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.busqueda select,
+.busqueda input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(173, 28, 28);
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn.primario {
+    background: #0078d7;
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.btn.primario:hover {
+    background: #005fa3;
+}
+
+.btn.secundario {
+    background: #28a745;
+    color: white;
+}
+
+.btn.secundario:hover {
+    background: #1e7e34;
+}
+
+.sugerencias {
+  padding: 1rem;            /* Espacio interno */
+}
+.sugerencias {
+    max-width: 250px;
+    margin: 0 auto;       /*auto en los lados hace que el bloque se centre horizontalmente.*/
+    margin-top: 1rem;         /* Lo aleja del formulario */
+    background-color: rgb(67, 66, 65);
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.sugerencias
+{   font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+footer {
+    background: #0078d7;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+footer a {
+    color: #eee;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

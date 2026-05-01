@@ -1,0 +1,123 @@
+/* Reset only what you need */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header {
+    height: 100px; 
+    width: 100%;
+    display: flex;               /* Activa flexbox */
+    justify-content: space-between; /* Separa izquierda y derecha */
+    align-items: center;         /* Centra verticalmente */
+    background: #0078d7;
+    padding: 10px 20px;
+}
+.imagen2 {
+    margin: 0;
+    height: 90px; /* Ajusta según el tamaño deseado */
+    display: flex;        
+    justify-content: space-between; 
+    align-items: center;        
+    gap: 50px; 
+    margin-left: 50px;                /* Elimina márgenes extra */
+    color: white;               /* Color del texto */
+}
+
+.nav ul {
+    display: flex;
+    margin-right: 40px;
+    gap: 20px;
+    list-style: none;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.nav ul li a:hover {
+    color: rgb(17, 167, 84);
+    background-color: red;
+}
+
+main {
+    padding: 20px;
+    background-color: rgb(203, 221, 233);
+}
+#main-title {
+    color: #186195;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    padding-left: 200px; /* más estable que margin-left */
+    text-align: left;
+}
+
+
+.contenido {
+    padding: 20px;
+    display: flex;        
+    justify-content: space-between; 
+    align-items: flex-start;        
+    gap: 30px;            
+}
+.video video {
+    width: 700px;
+    height: auto;
+}
+.ver {
+    margin: center;
+    margin-top: 10px;
+    text-align: center;
+    background: #186195; 
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: center;
+    padding: 20px 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+.cartel {
+    height: 480px; 
+    width: 600px;
+    position: relative;
+    bottom: 20px;   /* distancia desde abajo */
+    left: 60px;
+    margin-right: 60px;     /* distancia desde la izquierda */
+    margin-top: 10px;
+    background: #186195;       /* color fuerte para destacar */
+    color: white;              /* texto en contraste */
+    font-size: 22px;           /* tamaño grande */
+    font-weight: bold;
+    padding-left: 40px;        /* espacio interno */
+    padding-bottom: 10px;
+    border-radius: 6px;        /* esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* sombra para resaltar */
+}
+aside {
+    display: flex;               /* Activa flexbox */
+    justify-content: space-between; /* Separa izquierda y derecha */
+    align-items: center;         /* Centra verticalmente */
+    padding: 10px 10px;
+    border-radius: 8px;
+    gap: 10px;
+}
+footer {
+    background: #0078d7;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+footer a {
+    color: #eee;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
