@@ -37,16 +37,16 @@
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    /*transition: transform 0.5s ease, color 0.5s ease;*/
 }
 .nav ul li a:hover {
-    color: rgb(17, 167, 84);
-    background-color: red;
+    color: #000;
+    background-color:  #79bdf5;
 }
 main {
     padding: 20px;
     background-color: rgb(203, 221, 233);
 }
-
 #main-title {
     color: #186195;
     font-size: 2.2rem;

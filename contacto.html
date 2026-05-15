@@ -32,19 +32,19 @@
         <form action="https://formspree.io/f/mgeqvwgo" method="post">
             
             <label>Nombre</label>
-            <input type="text" name="nombre" placeholder= "  Escriba su nombre"> 
+            <input type="text" name="nombre" placeholder= "  Escriba su nombre" required> 
 
             <label>Apellido</label>
-            <input type="text" name="apellido" placeholder= "  Escriba su apellido"> 
+            <input type="text" name="apellido" placeholder= "  Escriba su apellido" required>
 
             <label>Correo electrónico</label>
-            <input type="email" name="email" placeholder= "  Escriba su Correo electrónico"> 
+            <input type="email" name="email" placeholder= "  Escriba su Correo electrónico" required>
 
             <label>Contraseña</label>
-            <input type="password" name="password" placeholder= "  Escriba su contraseña"> 
+            <input type="password" name="password" placeholder= "  Escriba su contraseña" required> 
 
             <!-- <label>Fecha de nacimiento</label> 
-            <input type="date" name="fecha" placeholder= "  Escriba su fecha de nacimiento">  -->
+            <input type="date" name="fecha" placeholder= "  Escriba su fecha de nacimiento" required>  -->
 
             <label>Tu consulta</label>
             <textarea name="consulta" id="" cols="30" rows="5" required></textarea>
@@ -60,7 +60,7 @@
                 </select>
 
                 <label>
-                    <input type="checkbox" name="terminos"> Acepto términos y condiciones
+                    <input type="checkbox" name="terminos" required> Acepto términos y condiciones
                 </label>
                 <div class="botones">
                     <button type="submit">Enviar</button>

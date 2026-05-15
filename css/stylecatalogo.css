@@ -40,8 +40,8 @@
     text-transform: uppercase;
 }
 .nav ul li a:hover {
-    color: rgb(17, 167, 84);
-    background-color: red;
+    color: #000;
+    background-color:  #79bdf5;
 }
 main {
     padding: 20px;
