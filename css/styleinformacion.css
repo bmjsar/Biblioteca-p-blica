@@ -72,14 +72,31 @@ details {
     margin-bottom: 15px; /* espacio entre bloques */
 }
 
-summary {
+/*summary {
     cursor: pointer;
     font-weight: bold;
 }
 
 summary::-webkit-details-marker {
     display: none; /* quita el marcador por defecto */
+/*}*/
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  color: #003366; /* azul oscuro para contraste */
 }
+
+summary:hover {
+  background-color: rgba(0, 51, 102, 0.08); /* azul translúcido suave */
+  color: #001a33; /* más intenso al hover */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* leve sombra */
+  border-left: 4px solid #003366; /* línea lateral */
+  padding-left: 10px; /* compensar espacio por la línea */
+}
+
 
 p {
     line-height: 1.6;
