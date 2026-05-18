@@ -56,27 +56,66 @@ main {
     text-align: left;
 }
 
-.catalogo ul{
-    margin-top: 1rem;
-    display: flex;
-    margin-right: 100px;
-    margin-bottom: 40px;
-    gap: 40px;
-    list-style: none;
+/* Contenedor de las opciones de búsqueda */
+.catalogo ul {
+  margin: 2rem 2rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;             /* permite que bajen en pantallas chicas */
+  justify-content: space-between; /* distribuye en todo el ancho */
+  gap: 100px;
+  list-style: none;
 }
+
+.catalogo ul li {
+  flex: 1 1 250px;             /* cada caja ocupa más ancho, mínimo 250px */
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Diferenciar cada tipo con color */
+.catalogo ul li:nth-child(1) {
+  background-color: #e3f2fd; /* Todos los campos */
+  border: 2px solid #2196f3;
+}
+
+.catalogo ul li:nth-child(2) {
+  background-color: #e3f2fd; /* Título */
+  border: 2px solid #2196f3;
+}
+
+.catalogo ul li:nth-child(3) {
+  background-color: #e3f2fd; /* Autor/Tema */
+  border: 2px solid #2196f3;
+}
+
+/* Efecto hover para dar protagonismo */
+.catalogo ul li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
 
 h3 {
     margin-top: 1rem;
-    margin-left: 200px;
+    margin-bottom: 1rem;
+    margin-left: 50px;
+    margin-right: auto;
     font-size: 25px;
-    background-color: #d4e7f6;
+    background-color: #cbe4f8;
     color: #186195;
     padding: 0.5rem;
     text-align: center;
     border-radius: 8px;
     max-width: 280px;
 }
-
+h3:hover {
+    color: #000;
+    background-color:  #79bdf5;
+}
 .busqueda {
     padding: 2rem;
 }
