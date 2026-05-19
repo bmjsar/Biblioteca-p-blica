@@ -183,9 +183,9 @@ h3:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 .sugerencias
-{   font-family: Arial, sans-serif;
-    background: white;
-    color: black;
+{   font-family: 'Times New Roman', Times, serif;
+    background:rgba(245, 245, 245, 0.801);
+    color: black; 
 }
 footer {
     background: #0078d7;
