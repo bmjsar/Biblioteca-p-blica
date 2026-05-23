@@ -1,125 +1,198 @@
-/* Reset only what you need */
+/* ==========================================================================
+   1. Ajustes Generales y Header
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+
 .header {
-    height: 100px; 
+    min-height: 100px; /* Cambiado a min-height por si el contenido se envuelve */
     width: 100%;
-    display: flex;               /* Activa flexbox */
-    justify-content: space-between; /* Separa izquierda y derecha */
-    align-items: center;         /* Centra verticalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #0078d7;
     padding: 10px 20px;
+    flex-wrap: wrap; /* Permite que el menú baje si no entra en pantallas chicas */
+    gap: 15px;
 }
+
 .imagen2 {
     margin: 0;
-    height: 90px; /* Ajusta según el tamaño deseado */
-    display: flex;        
-    justify-content: space-between; 
-    align-items: center;        
-    gap: 50px; 
-    margin-left: 50px;                /* Elimina márgenes extra */
-    color: white;               /* Color del texto */
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Reducido para que entre mejor en móviles */
+    color: white;
+}
+
+.imagen2 img {
+    height: 60px; /* Tamaño de logo más controlado */
+    width: auto;
 }
 
 .nav ul {
     display: flex;
-    margin-right: 40px;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
+    flex-wrap: wrap; /* Los enlaces se acomodan si la pantalla es muy angosta */
 }
+
 .nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
-    padding: 7px 13px;
+    font-size: 16px; /* Un poco más pequeño para mobile-friendly */
+    padding: 7px 10px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-.nav ul li a:hover {
-    color: #000;
-    background-color:  #79bdf5;
-    border-radius: 4px;
-}
 
+/* ==========================================================================
+   2. Contenido Principal (El gran cambio)
+   ========================================================================== */
 main {
     padding: 20px;
     background-color: rgb(203, 221, 233);
 }
+
 #main-title {
     color: #186195;
     font-size: 2.2rem;
     margin-top: 20px;
-    padding-left: 200px; /* más estable que margin-left */
-    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 0; /* Eliminado el padding fijo que rompía el diseño */
+    text-align: center; /* Centrado queda mucho mejor en todas las pantallas */
 }
-
 
 .contenido {
-    padding: 20px;
-    display: flex;        
-    justify-content: space-between; 
-    align-items: flex-start;        
-    gap: 30px;            
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row; /* Por defecto uno al lado del otro */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px; /* Centra el contenido en pantallas gigantes */
+    margin: 0 auto;
 }
+
+/* Contenedor del video */
+.contenido article {
+    flex: 1; /* Ocupa espacio proporcional */
+    width: 100%;
+    max-width: 600px;
+}
+
+.video {
+    width: 100%;
+}
+
+/* ¡CLAVE! El video ahora es 100% fluido */
 .video video {
-    width: 700px;
+    width: 100% !important; 
     height: auto;
+    border-radius: 6px;
 }
-.ver {
-    margin: center;
+
+/* Botón del video */
+.cartelvid {
     margin-top: 10px;
-    text-align: center;
-    background: #186195; 
+    padding: 12px 20px;
+    background-color: #0077cc;
     color: white;
-    font-size: 30px;
+    text-align: center;
     font-weight: bold;
-    width: center;
-    padding: 20px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%; /* Ocupa el ancho del video en móviles */
+    max-width: 200px;
+    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.cartelvid:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+/* El cartel informativo de la derecha */
+.contenido aside {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+}
+
+.cartel {
+    width: 100%; /* Ya no es fijo de 600px */
+    height: auto; /* Se adapta al texto que tenga dentro */
+    position: static; /* Eliminamos los 'left' y 'bottom' fijos que lo descolocaban */
+    background: #186195;
+    color: white;
+    font-size: 25px; /* Un poco más legible */
+    font-weight: bold;
+    padding: 30px; /* Espaciado interno uniforme */
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
-.cartel {
-    height: 480px; 
-    width: 600px;
-    position: relative;
-    bottom: 30px;  
-    left: 60px;
-    margin-right: 60px;     /* distancia desde la izquierda */
-    margin-top: 20px;
-    background: #186195;       /* color fuerte para destacar */
-    color: white;              /* texto en contraste */
-    font-size: 22px;           /* tamaño grande */
-    font-weight: bold;
-    padding-top: 50px;
-    padding-left: 40px;        /* espacio interno */
-    padding-bottom: 20px;
-    border-radius: 6px;        /* esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* sombra para resaltar */
+
+.cartel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
-aside {
-    display: flex;               /* Activa flexbox */
-    justify-content: space-between; /* Separa izquierda y derecha */
-    align-items: center;         /* Centra verticalmente */
-    padding: 10px 10px;
-    border-radius: 8px;
-    gap: 10px;
-}
+
+/* ==========================================================================
+   3. Footer
+   ========================================================================== */
 footer {
     background: #0078d7;
     color: #eee;
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-footer a {
+
+footer nav a, .social a {
     color: #eee;
     margin: 0 10px;
     text-decoration: none;
 }
+
 footer a:hover {
     text-decoration: underline;
+}
+
+/* ==========================================================================
+   4. MEDIA QUERY (La magia para celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Logo arriba, menú abajo */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .imagen2 {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 5px;
+    }
+
+    .nav ul {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .contenido {
+        flex-direction: column; /* ¡El video arriba y el cartel abajo! */
+        align-items: center;
+    }
+
+    .cartelvid {
+        max-width: 100%; /* Botón ancho completo en celular, más fácil de tocar */
+    }
 }

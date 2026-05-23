@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,59 +10,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Preentrega</title>
 </head>
-<header class="header">
-        
+<body> <!-- AQUÍ ABRE EL BODY -->
+
+    <header class="header">
         <div class="imagen2">
             <img src="Imagenes/logo.png" alt="Logo de la biblioteca">
             <h1 id="nombre">Faro de Cultura</h1>
         </div>
-            <nav class="nav"> 
-                <ul>
-                    <li><a href="index.html"> Inicio</a> </li>
-                    <li><a href="información.html"> información</a> </li>
-                    <li> <a href="catálogos.html"> Catálogos</a> </li>
-                    <li> <a href="prestamos.html"> Préstamos</a> </li>
-                    <li> <a href="contacto.html"> Contacto</a> </li>
-                </ul>
-            </nav>
-</header>
-<main>
-    <h1 id="main-title">Biblioteca pública</h1>
+        <nav class="nav"> 
+            <ul>
+                <li><a href="index.html"> Inicio</a> </li>
+                <li><a href="información.html"> información</a> </li>
+                <li><a href="catálogos.html"> Catálogos</a> </li>
+                <li><a href="prestamos.html"> Préstamos</a> </li>
+                <li><a href="contacto.html"> Contacto</a> </li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="contenido">
+    <main>
+        <h1 id="main-title">Biblioteca pública</h1>
 
-        <article>
-            <div class="video">
-                <video width="700" controls> 
-                <source src="videos/Una biblioteca del siglo XXI.mp4.mp4"> 
-            </div>
-            <div class="ver">
-                Mirá el video
-            </div>
-        </article>
+        <section class="contenido">
+            <article>
+                <div class="video">
+                    <!-- Agregamos 'controls' por si el botón falla, el usuario pueda usar el reproductor nativo -->
+                    <video id="miVideo" width="600" loop preload="auto" controls>
+                        <source src="videos/bibliosiglo21.mp4.mp4"> 
+                        Tu navegador no soporta video.
+                    </video>
+                    <div id="botonVideo" class="cartelvid">
+                        Mirá el video
+                    </div>
+                </div>
+            </article>
 
-        <aside>
-            <div class="cartel">
+            <aside>
+                <div class="cartel">
+                    <h2 class="animate__animated animate__backInRight">Fomenta la lectura y la investigación</h2>
+                    <br>
+                    <h2 class="animate__animated animate__backInRight animate__delay-1s">Acceso a la información y tecnología</h2>
+                    <br>
+                    <h2 class="animate__animated animate__backInRight animate__delay-2s">Conserva el patrimonio cultural</h2>
+                    <br>
+                    <h2 class="animate__animated animate__backInRight animate__delay-3s">Préstamo de materiales</h2>
+                    <br>
+                    <h2 class="animate__animated animate__backInRight animate__delay-4s"> Surgen nuevas ideas</h2>
+                    <br>
+                    <h2 class="animate__animated animate__backInRight animate__delay-5s">Estimula la creatividad</h2>
+                </div>
+            </aside>
+        </section>
+    </main>
 
-                <h2 class="animate__animated animate__backInRight">Fomenta la lectura y la investigación</h2>
-                    <br>
-                <h2 class="animate__animated animate__backInRight animate__delay-1s">Acceso a la información y tecnología</h2>
-                    <br>
-                <h2 class="animate__animated animate__backInRight animate__delay-2s">Conserva el patrimonio cultural</h2>
-                    <br>
-                <h2 class="animate__animated animate__backInRight animate__delay-3s">Préstamo de materiales</h2>
-                    <br>
-                <h2 class="animate__animated animate__backInRight animate__delay-4s"> Surgen nuevas ideas</h2>
-                    <br>
-                <h2 class="animate__animated animate__backInRight animate__delay-5s">Estimula la creatividad</h2>
-            
-            </div>
-        </aside>
-    </section>
-    
-</main>
-<footer>
-    <p>© 2024 Faro de Cultura. Todos los derechos reservados.</p>
+    <footer>
+        <p>© 2024 Faro de Cultura. Todos los derechos reservados.</p>
         <nav>
             <a href="/privacidad">Privacidad</a> |
             <a href="/terminos">Términos</a> |
@@ -72,6 +74,8 @@
             <a href="https://twitter.com/misitio">Twitter</a>
             <a href="https://facebook.com/misitio">Facebook</a>
         </div>
-</footer>
-    
-</html> 
+    </footer>
+
+    <script src="js/miVideo.js"></script>
+</body> <!-- AQUÍ CIERRA EL BODY -->
+</html>
