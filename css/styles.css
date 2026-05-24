@@ -132,7 +132,7 @@ main {
     color: white;
     font-size: 25px; /* Un poco más legible */
     font-weight: bold;
-    padding: 30px; /* Espaciado interno uniforme */
+    padding: 15px; /* Espaciado interno uniforme */
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }

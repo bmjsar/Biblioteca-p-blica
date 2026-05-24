@@ -59,45 +59,45 @@ main {
 
 /* Contenedor de las opciones de búsqueda */
 .catalogo ul {
-  margin: 2rem 2rem;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;             /* permite que bajen en pantallas chicas */
-  justify-content: space-between; /* distribuye en todo el ancho */
-  gap: 100px;
-  list-style: none;
+    margin: 2rem 2rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;             /* permite que bajen en pantallas chicas */
+    justify-content: space-between; /* distribuye en todo el ancho */
+    gap: 100px;
+    list-style: none;
 }
 
 .catalogo ul li {
-  flex: 1 1 250px;             /* cada caja ocupa más ancho, mínimo 250px */
-  padding: 15px;
-  border-radius: 6px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    flex: 1 1 250px;             /* cada caja ocupa más ancho, mínimo 250px */
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-/* Diferenciar cada tipo con color */
-.catalogo ul li:nth-child(1) {
-  background-color: #e3f2fd; /* Todos los campos */
-  border: 2px solid #2196f3;
-}
+    /* Diferenciar cada tipo con color */
+    .catalogo ul li:nth-child(1) {
+    background-color: #e3f2fd; /* Todos los campos */
+    border: 2px solid #2196f3;
+    }
 
-.catalogo ul li:nth-child(2) {
-  background-color: #e3f2fd; /* Título */
-  border: 2px solid #2196f3;
-}
+    .catalogo ul li:nth-child(2) {
+    background-color: #e3f2fd; /* Título */
+    border: 2px solid #2196f3;
+    }
 
-.catalogo ul li:nth-child(3) {
-  background-color: #e3f2fd; /* Autor/Tema */
-  border: 2px solid #2196f3;
-}
+    .catalogo ul li:nth-child(3) {
+    background-color: #e3f2fd; /* Autor/Tema */
+    border: 2px solid #2196f3;
+    }
 
-/* Efecto hover para dar protagonismo */
-.catalogo ul li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
+    /* Efecto hover para dar protagonismo */
+    .catalogo ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
 
 
 h3 {
