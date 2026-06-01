@@ -55,16 +55,18 @@ main {
     padding-left: 200px; /* más estable que margin-left */
     text-align: left;
 }
+
 .container {
     display: flex;
-    justify-content: space-between; /* formulario a la izquierda, sidebar a la derecha */
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 40px;
-    }
+    gap: 80px;
+    padding-left: 60px; /* agrega espacio interno a la izquierda */
+}
 
 
     /* Formulario ocupa aprox mitad */
-    .formulario {
+.formulario {
     flex: 2;
     max-width: 500px;
     }
@@ -77,20 +79,35 @@ main {
 .sidebar {
     flex: 1;
     display: flex;
-    flex-direction: column; /* foto arriba, mapa abajo */
+    flex-direction: column;
     gap: 20px;
-    }
+    margin-top: 40px; /* baja todo el bloque */
+}
+
     /* Imagen proporcionada */
-    .foto img {
-    width: 100%;
+
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.foto img {
+    padding-top: 50px;
+    max-width: 75%;
     height: auto;
-    padding-top: 30px;
     border-radius: 12px;
-    }
+}
 
     /* Mapa proporcionado */
-    .mapa iframe {
-    width: 100%;
+
+.mapa{
+    display: flex;
+    justify-content: center;
+}
+.mapa iframe {
+    width: 80%;
     height: 300px;
     border-radius: 12px;
     border: none;

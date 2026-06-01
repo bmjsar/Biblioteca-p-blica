@@ -1,58 +1,64 @@
-/* ==========================================================================
-   1. Ajustes Generales y Header
-   ========================================================================== */
+/* --- Estilos base --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', serif;
 }
 
+/* FIX #5: position: relative en el header para que el nav absoluto se posicione bien */
 .header {
-    min-height: 100px; /* Cambiado a min-height por si el contenido se envuelve */
+    position: relative;
+    min-height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #0078d7;
     padding: 10px 20px;
-    flex-wrap: wrap; /* Permite que el menú baje si no entra en pantallas chicas */
-    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .imagen2 {
-    margin: 0;
-    height: auto;
     display: flex;
     align-items: center;
-    gap: 15px; /* Reducido para que entre mejor en móviles */
+    padding-left: 30px;
+    gap: 15px;
     color: white;
 }
 
 .imagen2 img {
-    height: 60px; /* Tamaño de logo más controlado */
-    width: auto;
+    height: 60px;
+}
+
+#nombre {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white;
 }
 
 .nav ul {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     list-style: none;
-    flex-wrap: wrap; /* Los enlaces se acomodan si la pantalla es muy angosta */
+    flex-wrap: wrap;
 }
 
 .nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px; /* Un poco más pequeño para mobile-friendly */
+    font-size: 16px;
     padding: 7px 10px;
     border-radius: 3px;
     text-transform: uppercase;
 }
 
-/* ==========================================================================
-   2. Contenido Principal (El gran cambio)
-   ========================================================================== */
+.nav ul li a:hover {
+    color: #000;
+    background-color: #79bdf5;
+    border-radius: 4px;
+}
+
 main {
     padding: 20px;
     background-color: rgb(203, 221, 233);
@@ -60,28 +66,26 @@ main {
 
 #main-title {
     color: #186195;
-    font-size: 2.2rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 0; /* Eliminado el padding fijo que rompía el diseño */
-    text-align: center; /* Centrado queda mucho mejor en todas las pantallas */
+    font-size: 35px;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .contenido {
     padding: 10px 0;
     display: flex;
-    flex-direction: row; /* Por defecto uno al lado del otro */
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 60px;
     width: 100%;
-    max-width: 1200px; /* Centra el contenido en pantallas gigantes */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 /* Contenedor del video */
 .contenido article {
-    flex: 1; /* Ocupa espacio proporcional */
+    flex: 1;
     width: 100%;
     max-width: 600px;
 }
@@ -90,14 +94,13 @@ main {
     width: 100%;
 }
 
-/* ¡CLAVE! El video ahora es 100% fluido */
 .video video {
-    width: 100% !important; 
+    width: 100% !important;
     height: auto;
     border-radius: 6px;
 }
 
-/* Botón del video */
+/* FIX #10: estilos del botón (era un <div>, ahora es <button>) */
 .cartelvid {
     margin-top: 10px;
     padding: 12px 20px;
@@ -107,8 +110,11 @@ main {
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
-    width: 100%; /* Ocupa el ancho del video en móviles */
+    width: 100%;
     max-width: 200px;
+    border: none;           /* necesario al ser <button> */
+    font-family: inherit;   /* hereda la fuente del sitio */
+    font-size: 1rem;
     transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 }
 
@@ -125,14 +131,15 @@ main {
 }
 
 .cartel {
-    width: 100%; /* Ya no es fijo de 600px */
-    height: auto; /* Se adapta al texto que tenga dentro */
-    position: static; /* Eliminamos los 'left' y 'bottom' fijos que lo descolocaban */
+    width: 100%;
+    height: auto;
+    position: static;
     background: #186195;
     color: white;
-    font-size: 25px; /* Un poco más legible */
+    /* FIX #6: font-size bajado a 16px para que no sea enorme en el texto base */
+    font-size: 16px;
     font-weight: bold;
-    padding: 15px; /* Espaciado interno uniforme */
+    padding: 15px;
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
@@ -142,57 +149,138 @@ main {
     margin-bottom: 10px;
 }
 
-/* ==========================================================================
-   3. Footer
-   ========================================================================== */
 footer {
     background: #0078d7;
-    color: #eee;
+    color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    padding: 30px;
 }
 
-footer nav a, .social a {
-    color: #eee;
-    margin: 0 10px;
+footer a {
+    color: white;
     text-decoration: none;
+    margin: 0 10px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+/* --- MEDIA QUERIES --- */
+
+/* TABLETS (menos de 1024px) */
+@media (max-width: 1024px) {
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-title {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cartel {
+        left: 0;
+        margin: 20px 0;
+    }
 }
 
-/* ==========================================================================
-   4. MEDIA QUERY (La magia para celulares)
-   ========================================================================== */
+/* CELULARES (menos de 768px) */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Logo arriba, menú abajo */
-        text-align: center;
+        flex-direction: column;
+        height: auto;
         padding: 20px;
     }
 
     .imagen2 {
-        flex-direction: column;
         margin-left: 0;
-        gap: 5px;
+        margin-bottom: 20px;
     }
 
     .nav ul {
         justify-content: center;
+        gap: 5px;
+    }
+
+    .nav ul li a {
+        font-size: 14px;
+    }
+
+    .video video {
+        width: 100%;
+    }
+
+    .cartel h2 {
+        font-size: 18px;
+    }
+}
+
+/* --- Lógica del Menú Hamburguesa --- */
+
+.menu-checkbox {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100px;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background: #00569d;
+        transition: all 0.4s ease;
+        z-index: 999;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        padding: 20px;
         margin-right: 0;
+        gap: 0;
     }
 
-    .contenido {
-        flex-direction: column; /* ¡El video arriba y el cartel abajo! */
-        align-items: center;
+    .nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .cartelvid {
-        max-width: 100%; /* Botón ancho completo en celular, más fácil de tocar */
+    .nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .menu-checkbox:checked ~ .nav {
+        left: 0;
+    }
+
+    .menu-checkbox:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-checkbox:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-checkbox:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -7px);
     }
 }
