@@ -1,103 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información sobre la Biblioteca Faro de Cultura">
     <link rel="stylesheet" href="css/styleinformacion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <title>Preentrega</title>
+    <title>Información | Faro de Cultura</title>
 </head>
-<header class="header">
-        
-        <div class="imagen2">
-            <img src="Imagenes/logo.png" alt="Logo de la biblioteca">
-            <h1 id="nombre">Faro de Cultura</h1>
-        </div>
-            <nav class="nav"> 
-                <ul>
-                    <li><a href="index.html"> Inicio</a> </li>
-                    <li><a href="información.html"> información</a> </li>
-                    <li> <a href="catálogos.html"> Catálogos</a> </li>
-                    <li> <a href="prestamos.html"> Préstamos</a> </li>
-                    <li> <a href="contacto.html"> Contacto</a> </li>
-                </ul>
-            </nav>
-</header>
-<main> 
-    <h1 id="main-title">Información</h1>
 <body>
-    <aside class="foto">
-        
+
+<header class="header">
+    <div class="logo">
+        <img src="Imagenes/logo.png" alt="Logo de la Biblioteca Faro de Cultura">
+        <p id="nombre">Faro de Cultura</p>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="información.html">Información</a></li>
+            <li><a href="catálogos.html">Catálogos</a></li>
+            <li><a href="prestamos.html">Préstamos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1 class="titulo" id="main-title">Información</h1>
+
+    <div class="contenedor">
         <article class="texto">
-
             <div class="info">
-                        <!-- TEXTO -->
-                    <details>
-                        <summary>Horarios</summary>
-                            <p>Salas de Libros y Hemeroteca </p>
-                            <p>Lunes a viernes de 9 a 21 hs.</p> 
-                            <p>Sábados y domingos de 12 a 19 hs.</p> 
-                    </details>
-                    <details>
-                        <summary>Condiciones de ingreso</summary>
-                        <p>El usuario debe exhibir en el puesto de acceso alguno de los siguientes documentos originales:</p>
-                        <p>•	Documento Nacional de Identidad (DNI)</p>
-                        <p>•	Cédula de Identidad (extranjero/a)</p>
-                        <p>•	Carnet de conducir (argentino/a)</p>
-                    </details>
-                    <details>
+                <details>
+                    <summary>Horarios</summary>
+                    <p>Salas de Libros y Hemeroteca</p>
+                    <p>Lunes a viernes de 9 a 21 hs.</p> 
+                    <p>Sábados y domingos de 12 a 19 hs.</p> 
+                </details>
+                <details>
+                    <summary>Condiciones de ingreso</summary>
+                    <p>El usuario debe exhibir en el puesto de acceso alguno de los siguientes documentos originales:</p>
+                    <ul>
+                        <li>Documento Nacional de Identidad (DNI)</li>
+                        <li>Cédula de Identidad (extranjero/a)</li>
+                        <li>Carnet de conducir (argentino/a)</li>
+                    </ul>
+                </details>
+                <details>
                     <summary>Sala General de Lectura</summary>
-                        <p>En su antesala, el lector dispone de 3 terminales de autoconsulta a través de las cuales puede navegar en el catálogo en línea, solicitar material bibliográfico o consultar material que se encuentra digitalizado. También posee un puesto de orientación bibliográfica atendido por personal bibliotecario.</p>
-                    </details> 
-                    <details>   
-                        <summary>Sala de Lectura Parlante</summary>
-                        <p>Cuenta con conexión wifi, amplia luminosidad y 32 plazas (cómodas sillas y amplias mesas). Los lectores pueden concurrir a esta sala a realizar trabajos en grupo, llevar sus propios materiales de lectura y conversar en voz baja.</p>
-                    </details>
-                    <details>
-                        <summary>Sala de Acceso Libre</summary>
-                        <p>Se permite al usuario acceder con objetos personales y material bibliográfico propio para realizar tareas de estudio en un ambiente y espacio adecuados. No se permite ingresar a la sala con material de la Biblioteca.</p>
-                    </details>
-                    <details>
-                        <summary>Sala de Hemeroteca</summary>
-                        <p>Cuenta con un servicio de referencia atendido por personal especializado y capacidad para 20 personas con espacios para lectura informal y de acceso libre.</p>
-                    </details>
+                    <p>En su antesala, el lector dispone de 3 terminales de autoconsulta...</p>
+                </details>
+                <details>
+                    <summary>Sala de Lectura Parlante</summary>
+                    <p>Cuenta con conexión wifi, amplia luminosidad y 32 plazas...</p>
+                </details>
+                <details>
+                    <summary>Sala de Acceso Libre</summary>
+                    <p>Se permite al usuario acceder con objetos personales...</p>
+                </details>
+                <details>
+                    <summary>Sala de Hemeroteca</summary>
+                    <p>Cuenta con un servicio de referencia atendido por personal especializado...</p>
+                </details>
             </div>
-
         </article>
-    
-        <!-- IMAGEN -->
-        <div class="imagen">
-            <img src="Imagenes/bibli.jpg" alt="Foto de Biblioteca">
-        </div>
-    </aside>
 
-        
-    
-            <div class="cartel">
-        
-                <h2>¿Querés participar?</h2>
-            
-                <button id="btnRegistro">Registrarse</button>
-                <button id="btnLogin">Entrar</button>
+        <aside class="carousel">
+            <div class="slides">
+                <img src="Imagenes/bibli01.jpg" class="active" alt="Vista interior de la biblioteca" loading="lazy">
+                <img src="Imagenes/bibli02.jpg" alt="Sala de lectura" loading="lazy">
+                <img src="Imagenes/bibli03.jpg" alt="Zona de estudio" loading="lazy">
+                <img src="Imagenes/bibli3.jpg" alt="Zona de estudio" loading="lazy">
+                <img src="Imagenes/bibli4.jpg" alt="Zona de estudio" loading="lazy"> 
+                <img src="Imagenes/bibli5.jpg" alt="Zona de estudio" loading="lazy">
+                <img src="Imagenes/bibli06.jpg" alt="Zona de estudio" loading="lazy"> 
+                <img src="Imagenes/bibli7.jpg" alt="Zona de estudio" loading="lazy">
+                <img src="Imagenes/bibli07.jpg" alt="Zona de estudio" loading="lazy"> 
+                <img src="Imagenes/bibli08.jpg" alt="Zona de estudio" loading="lazy">
+                <img src="Imagenes/bibli09.jpg" alt="Zona de estudio" loading="lazy"> 
+                <img src="Imagenes/bibli10.jpg" alt="Zona de estudio" loading="lazy">
+                <img src="Imagenes/bibli11.jpg" alt="Zona de estudio" loading="lazy"> 
+                <img src="Imagenes/bibli12.jpg" alt="Zona de estudio" loading="lazy">
+                <img src="Imagenes/bibli13.jpg" alt="Zona de estudio" loading="lazy">
             </div>
-    
-        
-    </body> 
+
+            <div class="cartel">
+                <h3>¿Querés participar?</h3>
+                <div class="acciones">
+                    <button id="btnRegistro">Registrarse</button>
+                    <button id="btnLogin">Entrar</button>
+                </div>
+            </div>
+        </aside>
+    </div>
 </main>
+
+<div id="modalRegistro" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" aria-label="Cerrar">&times;</span>
+        <h3>Registro</h3>
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombreb" placeholder="Nombre" required>
+
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+
+            <label for="correoRegistro">Correo electrónico</label>
+            <input type="email" id="correoRegistro" placeholder="Correo electrónico" required>
+
+            <label for="contraseñaRegistro">Contraseña</label>
+            <input type="password" id="contraseñaRegistro" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</div>
+
+<div id="modalLogin" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" aria-label="Cerrar">&times;</span>
+        <h3>Iniciar Sesión</h3>
+        <form>
+            <label for="correoLogin">Correo electrónico</label>
+            <input type="email" id="correoLogin" placeholder="Correo electrónico" required>
+
+            <label for="contraseñaLogin">Contraseña</label>
+            <input type="password" id="contraseñaLogin" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</div>
+
 <footer>
-    <p>© 2024 Faro de Cultura. Todos los derechos reservados.</p>
-        <nav>
-            <a href="/privacidad">Privacidad</a> |
-            <a href="/terminos">Términos</a> |
-            <a href="contacto.html"> Contacto</a>
-        </nav>
-        <div class="social">
-            <a href="https://twitter.com/misitio">Twitter</a>
-            <a href="https://facebook.com/misitio">Facebook</a>
-        </div>
+    <p>© 2026 Faro de Cultura. Todos los derechos reservados.</p>
+    <nav>
+        <a href="/privacidad">Privacidad</a> |
+        <a href="/terminos">Términos</a> |
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="social">
+        <a href="https://twitter.com/misitio" target="_blank">Twitter</a>
+        <a href="https://facebook.com/misitio" target="_blank">Facebook</a>
+    </div>
 </footer>
-    
-</html> 
+
+<script src="js/script.js"></script>
+</body>
+</html>

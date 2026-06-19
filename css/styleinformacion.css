@@ -1,144 +1,431 @@
-/* Reset only what you need */
+/* ==========================================
+   ESTILOS BASE - Faro de Cultura
+   ========================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-}
-.header {
-    height: 100px; 
-    width: 100%;
-    display: flex;               /* Activa flexbox */
-    justify-content: space-between; /* Separa izquierda y derecha */
-    align-items: center;         /* Centra verticalmente */
-    background: #0078d7;
-    padding: 10px 20px;
-}
-.imagen2 {
-    margin: 0;
-    height: 90px; /* Ajusta según el tamaño deseado */
-    display: flex;        
-    justify-content: space-between; 
-    align-items: center;        
-    gap: 50px; 
-    margin-left: 50px;                /* Elimina márgenes extra */
-    color: white;               /* Color del texto */
 }
 
+body {
+    font-family: 'Old Standard TT', 'Times New Roman', Times, serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0078d7;
+    padding: 12px 25px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.logo img {
+    height: 65px;
+    padding-left: 10px;
+}
+
+#nombre {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+/* Menú Hamburguesa */
+.menu-checkbox {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Navegación */
 .nav ul {
     display: flex;
-    margin-right: 40px;
-    gap: 20px;
+    gap: 8px;
     list-style: none;
+    flex-wrap: wrap;
 }
+
 .nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-.nav ul li a:hover {
-    color: #000;
-    background-color:  #79bdf5;
+    font-size: 16px;
+    padding: 10px 14px;
     border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
+
+.nav ul li a:hover {
+    background-color: #79bdf5;
+    color: #003366;
+}
+
+/* ==========================================
+    CONTENIDO PRINCIPAL
+   ========================================== */
 main {
-    padding: 20px;
+    flex: 1; /* ocupa todo el espacio disponible */
     background-color: rgb(203, 221, 233);
-}
-#main-title {
+} 
+
+.titulo {
     color: #186195;
-    font-size: 2.2rem;
-    margin-top: 20px;
-    padding-left: 200px; /* más estable que margin-left */
-    text-align: left;
+    font-size: 38px;
+    text-align: center;
+    padding: 40px 0 30px 0;
+    font-weight: 700;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 25px 40px;
 }
 
 .texto {
     flex: 1;
-    font-size: 25px;
-    line-height: 1.6;
 }
-.info {
-    margin-top: 40px;
 
+.carousel {
+    flex: 0 0 420px;
 }
+
+/* Details (acordeón) */
+.info {
+    margin-top: 20px;
+}
+
 details {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px;
-    background-color: #d4e7f6;
-    margin-bottom: 15px; /* espacio entre bloques */
+    border: 1px solid #b3d4f0;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #e6f0fa;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
 summary {
     cursor: pointer;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 4px;
+    font-weight: 700;
+    padding: 14px 18px;
+    border-radius: 6px;
+    color: #003366;
     transition: all 0.3s ease;
-    color: #003366; /* azul oscuro para contraste */
 }
 
 summary:hover {
-  background-color: rgba(0, 51, 102, 0.08); /* azul translúcido suave */
-  color: #001a33; /* más intenso al hover */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* leve sombra */
-  border-left: 4px solid #003366; /* línea lateral */
-  padding-left: 10px; /* compensar espacio por la línea */
+    background-color: rgba(0, 51, 102, 0.08);
+    color: #001f4d;
+    border-left: 5px solid #0078d7;
 }
 
-p {
-    line-height: 1.6;
-}
-aside.foto {
-    display: flex;
-    justify-content: space-between; /* texto a la izquierda, foto a la derecha */
-    align-items: center;            /* centra verticalmente ambos bloques */
-    gap: 20px;
-    padding: 10px;
+details[open] summary {
+    border-bottom: 1px solid #b3d4f0;
+    margin-bottom: 10px;
 }
 
-.imagen {
-    flex: 1;
-    max-width: 800px; /* controla el tamaño de la foto */
+/* Carrusel */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.imagen img {
-    max-width:800px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.8s ease-in-out, visibility 2.8s ease-in-out;
 }
-h2 {
-    padding-bottom: 5px;
-    
+
+.slides img.active {
+    opacity: 1;
+    visibility: visible;
 }
+
+/* Cartel inferior */
 .cartel {
-    margin-left: 670px;
-    margin-right: 16px;
-    margin-top: 5px;
-    margin-bottom: 30px;
+    margin-top: 25px;
     text-align: center;
-    background-color: #186195;
-    padding: 15px;
-    border-radius: 10px;
+    background: #186195;
+    padding: 28px 20px;
+    border-radius: 12px;
     color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.cartel h3 {
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.acciones button {
+    padding: 12px 28px;
+    border: none;
+    background: #0078d7;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.acciones button:hover {
+    background: #00569d;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   MODALES
+   ========================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cerrar {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.cerrar:hover {
+    color: #e74c3c;
+}
+
+.modal-contenido h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #186195;
+}
+
+.modal-contenido input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.modal-contenido button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-contenido button:hover {
+    background: #00569d;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
 
 footer {
     background: #0078d7;
-    color: #eee;
+    color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
+    padding: 20px 15px;   /* ya más compacto */
+    margin-top: 0;
+    line-height: 1.3;     /* interlineado más ajustado */
+    font-size: 0.9em;     /* opcional: texto un poco más chico */
 }
+
+
+footer p {
+    margin-bottom: 12px;
+}
+
+footer nav, .social {
+    margin-top: 12px;
+}
+
 footer a {
-    color: #eee;
-    margin: 0 10px;
+    color: white;
     text-decoration: none;
+    margin: 0 12px;
+    transition: opacity 0.2s;
 }
+
 footer a:hover {
+    opacity: 0.8;
     text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVIDAD
+   ========================================== */
+
+@media (max-width: 992px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .carousel {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .slides {
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    #nombre {
+        font-size: 22px;
+    }
+
+    .logo img {
+        height: 52px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background: #00569d;
+        transition: left 0.4s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .nav ul li a {
+        padding: 16px 25px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .menu-checkbox:checked ~ .nav {
+        left: 0;
+    }
+
+    /* Animación hamburguesa a X */
+    .menu-checkbox:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-checkbox:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-checkbox:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .titulo {
+        font-size: 32px;
+    }
+
+    .slides {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 0 15px 30px;
+    }
+    
+    .slides {
+        height: 240px;
+    }
 }
