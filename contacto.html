@@ -1,94 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Faro de Cultura</title>
     <link rel="stylesheet" href="css/stylecontacto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <title>Preentrega</title>
 </head>
-<header class="header">
-        
+<body>
+
+    <header class="header">
         <div class="imagen2">
             <img src="Imagenes/logo.png" alt="Logo de la biblioteca">
-            <h1 id="nombre">Faro de Cultura</h1>
+            <h1>Faro de Cultura</h1>
         </div>
-            <nav class="nav"> 
-                <ul>
-                    <li><a href="index.html"> Inicio</a> </li>
-                    <li><a href="información.html">información</a> </li>
-                    <li> <a href="catálogos.html"> Catálogos</a> </li>
-                    <li> <a href="prestamos.html"> Préstamos</a> </li>
-                    <li> <a href="contacto.html"> Contacto</a> </li>
-                </ul>
-            </nav>
+        
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="información.html">Información</a></li>
+            <li><a href="catálogos.html">Catálogos</a></li>
+            <li><a href="prestamos.html">Préstamos</a></li>
+            <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+    </nav>
 </header>
-<main>
-    <h2 id="main-title">Envianos tu consulta o visitanos</h2>
-    <body>
+
+    <main>
+        <h2 id="main-title">Envianos tu consulta o visitanos</h2>
+        
         <div class="container">
-                <form class="formulario" action="https://formspree.io/f/mgeqvwgo" method="post">
-                        
-                        <label>Nombre</label>
-                        <input type="text" name="nombre" placeholder= "  Escriba su nombre"> 
+            <form class="formulario" action="https://formspree.io/f/mgeqvwgo" method="post">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required>
 
-                        <label>Apellido</label>
-                        <input type="text" name="apellido" placeholder= "  Escriba su apellido"> 
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Escriba su apellido" required>
 
-                        <label>Correo electrónico</label>
-                        <input type="email" name="email" placeholder= "  Escriba su Correo electrónico"> 
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Escriba su correo electrónico" required>
 
-                        <label>Contraseña</label>
-                        <input type="password" name="password" placeholder= "  Escriba su contraseña"> 
+                <label for="consulta">Tu consulta</label>
+                <textarea id="consulta" name="consulta" placeholder="Escriba su mensaje aquí..." required></textarea>
 
-                        <!-- <label>Fecha de nacimiento</label> 
-                        <input type="date" name="fecha" placeholder= "  Escriba su fecha de nacimiento">  -->
+                <label for="nacionalidad">Nacionalidad</label>
+                <select id="nacionalidad" name="nacionalidad" required>
+                    <option value="">Seleccione su nacionalidad</option>
+                    <option value="ar">Argentina</option>
+                    <option value="pe">Perú</option>
+                    <option value="py">Paraguay</option>
+                    <option value="ch">Chile</option>
+                    <option value="uy">Uruguay</option>
+                    <option value="bv">Bolivia</option>
+                </select>
 
-                        <label>Tu consulta</label>
-                        <textarea name="consulta" id="" cols="30" rows="5" required></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="terminos" required>
+                    Acepto términos y condiciones
+                </label>
 
-                        <label>Nacionalidad</label>
-                            <select>
-                                <option value="ar">Argentina</option>
-                                <option value="pe">Perú</option>
-                                <option value="py">Paraguay</option>
-                                <option value="ch">Chile</option>
-                                <option value="uy">Uruguay</option>
-                                <option value="bv">Bolivia</option>
-                            </select>
+                <div class="botones">
+                    <button type="submit">Enviar</button>
+                    <button type="reset" class="limpiar">Limpiar</button>
+                </div>
+            </form>
 
-                            <label>
-                                <input type="checkbox" name="terminos"> Acepto términos y condiciones
-                            </label>
-                            <div class="botones">
-                                <button type="submit">Enviar</button>
-                                <button type="reset" class="limpiar">Limpiar</button>
-                            </div>
-                </form>
-                <div class="sidebar">
-                    <div class="foto">
-                        <img src="Imagenes/visita.jpg" alt="Visita">
-                    </div>
-                <div class="mapa">  
-                    <iframe src="https://maps.google.com/maps?q=paraguay+1171+caba&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            <div class="sidebar">
+                <div class="foto">
+                    <img src="Imagenes/visita.jpg" alt="Visita a la biblioteca">
+                </div>
+                <div class="mapa">
+                    <iframe src="https://maps.google.com/maps?q=biblioteca&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </body>
-</main>
+    </main>
 
-<footer>
-    <p>© 2024 Faro de Cultura. Todos los derechos reservados.</p>
+    <footer>
+        <p>© 2026 Faro de Cultura. Todos los derechos reservados.</p>
         <nav>
             <a href="/privacidad">Privacidad</a> |
             <a href="/terminos">Términos y condiciones</a> |
-            <a href="contacto.html"> Contacto</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
         <div class="social">
-            <a href="https://twitter.com/misitio">Twitter</a>
-            <a href="https://facebook.com/misitio">Facebook</a>
+            <a href="https://twitter.com/misitio" target="_blank">Twitter</a>
+            <a href="https://facebook.com/misitio" target="_blank">Facebook</a>
         </div>
-</footer>
+    </footer>
+
+</body>
+</html>
